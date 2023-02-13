@@ -1,0 +1,25 @@
+---
+apiversion: v1
+kind: Pod
+metadata:
+  name: restart-policy
+spec:
+  containers:
+    - image: alpine:3
+      name: restart_never
+      command:
+        - sleep
+        - "2"
+  restartPolicy: Never      
+---        
+apiversion: v1
+kind: Pod
+metadata:
+  name: restart-policy
+spec:
+  containers:
+    - image: alpine:3
+      name: restart_never
+      command:
+        - sleep
+        - "2"
